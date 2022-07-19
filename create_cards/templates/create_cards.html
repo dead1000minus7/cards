@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body>
+<form method="POST">
+
+<label>Название карты<input placeholder="Название карты" name="title_card"></label>
+
+<label>Краткое описание карты<input placeholder="Описание карты" name="description_card"></label>
+
+<select name="class_card">
+    <option hidden>Класс карты</option>
+
+    {% for x in class_card %}
+
+    <option>{{x}}</option>
+    {% endfor %}
+</select>
+
+<select name="type_card">
+    <option hidden>Выберите тип карты</option>
+
+    {% for x in type_card %}
+
+    <option>{{x}}</option>
+
+    {% endfor %}
+</select>
+
+<select name="rare_card">
+    <option hidden>Редкость карты</option>
+    {% for x in rare_card %}
+    <option>{{x}}</option>
+    {% endfor %}
+</select>
+
+<select name="attack_card">
+    <option hidden>Атака</option>
+    {% for x in attack_card %}
+    <option>{{x}}</option>
+    {% endfor %}
+</select>
+
+<select name="mana_card">
+    <option hidden>Манакост</option>
+    {% for x in mana_card %}
+    <option>{{x}}</option>
+    {% endfor %}
+</select>
+
+
+<select name="life_card">
+    {% for x in life_card %}
+    <option hidden>Жизнь</option>
+    {{life_card.counter}}
+    <option>{{x}}</option>
+    {% endfor %}
+</select>
+
+</form>
+</body>
+</html>
