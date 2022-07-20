@@ -1,6 +1,6 @@
 from cards import db
 
-class User(db.Model):
+class Cards(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name_card = db.Column(db.String,unique = True)
     description_card = db.Column(db.String,unique = True)
